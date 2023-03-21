@@ -1,27 +1,88 @@
-// Lijst met vreemde quotes
-const quotes = [
-  "Je zult binnenkort een kudde geiten leiden.",
-  "Een gigantische robot zal je binnenkort volgen als een huisdier.",
-  "Er komt een dag waarop je zult communiceren via scheten.",
-  "Je zult de wereld redden met niets anders dan een banaan.",
-  "Je zult binnenkort de leider worden van een mierenkolonie.",
-  "Een eenhoorn zal binnenkort in je leven verschijnen.",
-  "Je zult de eerste mens zijn die vliegt met behulp van pindakaas.",
-  "Je zult binnenkort een beroemde wereldleider worden...van een planeet die nog niet is ontdekt."
-];
-
-// Functie om willekeurige quote te kiezen
-function chooseQuote() {
-  const randomIndex = Math.floor(Math.random() * quotes.length);
-  return quotes[randomIndex];
-}
-
-// Voorspelling weergeven
-function displayPrediction() {
-  const predictionText = document.getElementById("prediction-text");
-  predictionText.innerHTML = chooseQuote();
-}
-
-// Event listener voor knop
-const predictButton = document.getElementById("predict-button");
-predictButton.addEventListener("click", displayPrediction);
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Toekomstvoorspeller</title>
+    <style>
+      body {
+        background-color: #f1f1f1;
+        font-family: Arial, sans-serif;
+      }
+      
+      #container {
+        width: 600px;
+        margin: auto;
+        margin-top: 50px;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 20px;
+      }
+      
+      #prediction-ball {
+        background-image: url('https://i.imgur.com/lEovzdr.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        margin-bottom: 20px;
+      }
+      
+      #prediction-text {
+        font-size: 24px;
+        text-align: center;
+      }
+      
+      #predict-button {
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      
+      #predict-button:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="prediction-ball"></div>
+      <div id="prediction-text">Druk op de knop om een toekomstvoorspelling te krijgen.</div>
+      <button id="predict-button">Voorspelling doen</button>
+    </div>
+    
+    <script>
+      // Lijst met vreemde quotes
+      const quotes = [
+        "Je zult binnenkort een kudde geiten leiden.",
+        "Een gigantische robot zal je binnenkort volgen als een huisdier.",
+        "Er komt een dag waarop je zult communiceren via scheten.",
+        "Je zult de wereld redden met niets anders dan een banaan.",
+        "Je zult binnenkort de leider worden van een mierenkolonie.",
+        "Een eenhoorn zal binnenkort in je leven verschijnen.",
+        "Je zult de eerste mens zijn die vliegt met behulp van pindakaas.",
+        "Je zult binnenkort een beroemde wereldleider worden...van een planeet die nog niet is ontdekt."
+      ];
+      
+      // Functie om willekeurige quote te kiezen
+      function chooseQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        return quotes[randomIndex];
+      }
+      
+      // Voorspelling weergeven
+      function displayPrediction() {
+        const predictionText = document.getElementById("prediction-text");
+        predictionText.innerHTML = chooseQuote();
+      }
+      
+      // Event listener voor knop
+      const predictButton = document.getElementById("predict-button");
+      predictButton.addEventListener
