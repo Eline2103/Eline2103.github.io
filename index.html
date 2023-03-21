@@ -1,0 +1,27 @@
+// Lijst met vreemde quotes
+const quotes = [
+  "Je zult binnenkort een kudde geiten leiden.",
+  "Een gigantische robot zal je binnenkort volgen als een huisdier.",
+  "Er komt een dag waarop je zult communiceren via scheten.",
+  "Je zult de wereld redden met niets anders dan een banaan.",
+  "Je zult binnenkort de leider worden van een mierenkolonie.",
+  "Een eenhoorn zal binnenkort in je leven verschijnen.",
+  "Je zult de eerste mens zijn die vliegt met behulp van pindakaas.",
+  "Je zult binnenkort een beroemde wereldleider worden...van een planeet die nog niet is ontdekt."
+];
+
+// Functie om willekeurige quote te kiezen
+function chooseQuote() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  return quotes[randomIndex];
+}
+
+// Voorspelling weergeven
+function displayPrediction() {
+  const predictionText = document.getElementById("prediction-text");
+  predictionText.innerHTML = chooseQuote();
+}
+
+// Event listener voor knop
+const predictButton = document.getElementById("predict-button");
+predictButton.addEventListener("click", displayPrediction);
